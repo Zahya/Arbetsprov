@@ -1,0 +1,153 @@
+html {
+    height: 100%;
+}
+
+body {
+    max-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    overflow: auto;
+    margin: 0;
+    box-sizing: border-box;
+    background: #002650;
+    background: -webkit-linear-gradient(#002650, #3B57A7); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#002650, #3B57A7); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#002650, #3B57A7); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#002650, #3B57A7)
+}
+
+.app__content {
+    margin: auto;
+    max-width: 50rem;
+    text-align: center;
+}
+
+.search__container {
+    position: relative;
+}
+
+.search__input-container {
+    padding: 0 1rem;
+}
+
+.search__input {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-image: url('UI/assets/search.svg');
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 1rem;
+    width: 100%;
+    padding: 1rem;
+    padding-left: 3rem;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.search__input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;   
+}
+
+.search__input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;   
+}
+
+.search__input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;   
+}
+
+.search__input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;   
+}
+
+.search__input:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.search__suggestion-list {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.search__suggestion {
+    color: #002650;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: none;
+    list-style: none;
+}
+
+.search__suggestion--selected {
+    color: #ffffff;
+    background-color: #002650;
+}
+
+.search__result-list {
+    padding: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search__result-list:empty {
+    display: none;
+}
+
+.search__result {
+    color: #ffffff;
+    padding: 1rem;
+    border: none;
+    list-style: none;
+    position: relative;
+    display: flex;  
+    align-items: baseline;  
+}
+
+.search__result:hover {
+    background-color: rgba(255, 255, 255, 0.2);    
+}
+
+.search_result-content {
+    margin: 0;
+    width: 50%;
+    text-align: left;
+}
+
+.search_result-content--date {
+    font-size: 14px;
+}
+
+.search__result-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3rem;
+    border: none; 
+    background-color: #793A53; 
+    background-image: url('UI/assets/cancel.svg');
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position-y: 50%;
+    background-position-x: 50%; 
+    opacity: 0;
+}
+
+.search__result-delete:hover {
+    cursor: pointer;
+}
+
+.search__result:hover .search__result-delete {
+    opacity: 1;
+}
